@@ -1,0 +1,21 @@
+#symbol_map {
+	top:100px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+.head_text { font-size: 28px; font-weight: bold; }
+
+
+ .colour_text {
+	color: red ;
+	font-weight: bold;
+  }
+ 
+
+h1{font-family: 'Source Sans Pro'}
+
+p{font-family: 'Source Sans Pro'}

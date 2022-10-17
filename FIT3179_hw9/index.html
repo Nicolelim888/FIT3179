@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src ="myscript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href = "styles.css" rel = "stylesheet">
+
+
+</head>
+
+<style>
+body {
+  background-image: url('https://i.pinimg.com/originals/ce/3c/1f/ce3c1f0bde15824a6f8afcd22b12b314.jpg');
+}
+</style>
+
+<style>
+    h1 {text-align: center; padding: 50px; 
+    font-size: 45px; font-weight: bold; 
+    margin: 50px 100px 50px 100px ; border-radius: 25px}
+</style>
+
+
+<style>
+    p {text-align: left; padding: 75px; padding-top:20px ;padding-bottom:15px ; align-items: center;
+    font-size: 18px; margin: 50px 100px 50px 100px ; border-radius: 25px; margin-bottom: 10px; 
+    border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;}
+</style>
+
+
+<style>
+    DIV {background: white; align-items: center; margin-left: 100px; margin-right: 100px;border-radius: 25px;
+        margin-top: 0px; margin-bottom: 20px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px; }
+</style>
+
+<style>
+    footer {
+  text-align: center;
+  padding: 3px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/5566/5566691.png'); 
+      font-size: 40px; font-weight: bold; font-family: 'Source Sans Pro';
+     } 
+
+
+    </style>
+
+
+<body>
+    <h1 style="background-color:white">Air Transport Throughout The World</h1>
+    <p style="background: white; margin-bottom: 0px;">
+        <span class ='head_text' >Introduction</span><br>
+        Throughout the years, transportation has evolved drastically from land, to air and sea. <br>  
+        In todays's world, air travel has dominated the world and has greatly increased our mobility.
+        Air transport is one of the fastest modes of public transport which connects international boundaries. <br>
+        <br>
+        It allows people from different countries to cross international boundaries and travel other countries for personal, business, medical, and tourism purposes. 
+        Billions of people now rely on air transportations for work, to see their loved ones or to simply enjoy their vacation overseas.<br>
+        <br>
+        <span class ='colour_text' >Therefore, we will be exploring the top countries with the busiest airports and best airlines!</span><br>
+        <DIV id = "map1"></DIV>
+    </p>
+    
+
+    
+    <p style="background: white; margin-bottom: 0px;">
+        <span class ='head_text' >Service Ratings of Airlines Across Countries</span><br>
+        With more passengers travelling across the world, many wonder which country has the best airlines amongst them all. <br>
+        Let's take a look at the ranking of airlines across the world! <br>
+        In this visualisation, airlines are ranked based on the total score which consists of:<br>
+        <br>
+        1. Punctuality <br>
+        <br>
+        2. Quality of Service <br>
+        <br>
+        3. Handling of Passenger's Rights<br> 
+        
+        <DIV id = "map2"></DIV>
+    </p>
+   
+
+
+    <p style="background: white; margin-bottom: 0px;">
+        <span class ='head_text' >Total Air Traffic Throughout The Years</span><br>
+        The chart below shows us how the number of passengers for each country has changed over the years. This 
+        reflects the slow but steady increasing trend of passengers worldwide. One notable change near 2020 is the sudden drop in passengers.
+        This is due to the COVID-19 restrictions that prevented many from travelling.<br>
+        <br>
+        *Tip: Hover over each country/line to view the respective tooltips!
+        <DIV id = "map3"></DIV>
+    </p>
+
+<footer>
+    <br>
+    Hope you enjoyed the visualisation! Thank you! 
+    <br>
+    <br>
+    <br>
+    <br>
+</footer> 
+
+</body>
+</html>
