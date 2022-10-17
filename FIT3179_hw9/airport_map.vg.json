@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
   "data": {
     "url": "https://raw.githubusercontent.com/Nicolelim888/FIT3179/main/World's%20busiest%20airport%202019.csv"
   },
