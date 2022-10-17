@@ -1,0 +1,71 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 520,
+    "height": 600,
+    "title": "Ratings Of Top Airlines Across The World",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Nicolelim888/FIT3179/main/2018%20Airline%20Rankings%20by%20AirHelp.csv"
+    },
+    "params": [
+      {
+        "name": "Total_Score_Above",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "name": "Total_Score: "
+        }
+      }
+    ],
+    "transform": [
+      {"filter": "datum.Total_Score > Total_Score_Above"}
+    ],
+    "encoding": {
+      "x": {
+        "field": "Punctuality",
+        "type": "quantitative",
+        "title": "Punctuality Score",
+        "axis": {"tickCount": 9},
+        "scale": {"domain": [5,10]}},
+      "y": {
+        "field": "Service Quality",
+        "type": "quantitative",
+        "axis": {"tickCount": 9},
+        "scale": {
+          "domain": [5,10]}
+      }
+    },
+    "layer": [
+      {
+        "mark": "circle",
+        "encoding": {
+          "size": {
+            "field": "Total_Score",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [2, 4, 6, 8, 10],
+              "range": [50, 150, 300, 600, 1000, 1800]
+            },
+            "legend": {"format": ".1s"}
+          },
+          "color": {
+            "field": "Handling of Passenger Rights",
+            "type": "quantitative"
+          },
+          "opacity": {"value": 0.6},
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "Rank", "type": "quantitative", "format": ","},
+            {"field": "Punctuality", "type": "quantitative", "format": ","},
+            {"field": "Service Quality", "type": "quantitative", "format": ","},
+            {"field": "Handling of Passenger Rights", "type": "quantitative", "format": ","},
+            {"field": "Total_Score", "type": "quantitative", "format": ","}
+          ]
+        }
+      }
+    ], 
+    "config": {"title": {"font": "sans-serif", "fontSize": 16, "anchor":"start"}}
+  }

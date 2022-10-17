@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Nicolelim888/FIT3179/main/FIT3179_hw9/airline_across_years.csv"
+    },
+    "title":"Number Of Passengers Taking Air Transport Across The Years",
+    "vconcat": [
+      {
+        "width": 483,
+        "mark": "area",
+        "height": 60,
+        "title": "Use this to select intervals of data",
+        "params": [
+          { "name": "time_brush",
+            "select": {"type": "interval", "encodings": ["x"]}
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "timeUnit": "year",
+            "axis": {"title": "", "format": "%Y"}
+          }
+        }
+      },
+      {
+        "width": 475,
+        "height": 300,
+    "transform": [
+      {"filter": "datum.Passengers > 0"}],
+      "mark": {
+        "type": "line"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "timeUnit": "year",
+          "scale": {"domain": {"param": "time_brush"}},
+          "title":"Year"
+        },
+        "y": {
+          "field": "Passengers",
+          "title": "Number of Passengers",
+         "axis": {"tickCount": 7},
+        "scale": {"type": "log", "domain": [100, 10000000000]
+        }},
+        "color": {
+          "type": "nominal",
+          "field": "Country",
+          "title": "Country"
+        },
+            "tooltip": [
+              {"field": "Country", "type": "nominal"},
+              {"field": "Passengers", "type": "quantitative", "format": ","}
+            ]
+      }
+      }
+    ],
+    "config": {"title": {"font": "sans-serif", "fontSize": 14,"anchor":"middle"}}
+  }
